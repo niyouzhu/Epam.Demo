@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f0b84f8f-50ee-4b58-a035-48ff1f382abf"
+  name="Epam.Demo.Business.Default" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="62531ce8-db8a-4337-b77a-0fe5d93dc6bd">
+      <packageMoniker
+        Id="e93540d8-4ff3-4ec1-aec7-de360d376e37"
+        LastKnownName="Epam.Demo.Business"
+        LastKnownLocation="Package1_2100.uml" />
+    </dependency>
+  </suppliersInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="57d71914-76ce-46c5-9f1b-b5e81c253404"
+        name="DefaultUserInfoBusiness"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="7f34ef3f-0319-430f-ba23-6005b63f3901">
+            <interfaceMoniker
+              Id="1831fa2e-9ed0-4aa0-baa9-4ba695d4dd8b"
+              LastKnownName="IUserInfoBusiness"
+              LastKnownLocation="Package1_2100.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="9f1b605b-6f70-480a-b152-7258fe78346d"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="89736a82-1713-4385-9858-b856f3e01c8a"
+                  name="userInfo"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="08d1f043-3108-40e3-9133-6f4069182503"
+                      LastKnownName="UserInfoBusinessObject"
+                      LastKnownLocation="Package1_2100.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

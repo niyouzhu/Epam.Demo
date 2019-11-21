@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="fc1d9563-f587-4c3d-a0b5-f2f9b2277ac9" name="Epam.Demo" linkedPackageId="9e5828e3-2390-4942-8a46-8483e6b3a181" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="ae2ce947-6eea-47b7-86d3-6acd0fd87170" name="Epam.Demo.Core">
+        <elementDefinition Id="4607961c-33bb-42e2-9037-aebb1bc980e3" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="9189975d-8508-4310-84fa-8df53c6c372b" name="ConnectionException" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="6c7fdc18-33bc-425c-883e-18d3a994d9ad" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a58b7145-b0b7-40c0-a1bf-5563d025633b" name="ExceptionAttribute" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="645de304-4593-4023-ba28-55ccd689d1fa" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="7e711183-e5b8-421d-9472-abdcddc476b2" name="Epam.Demo.DataAccess">
+        <elementDefinition Id="11424712-d624-4979-939f-bf9bba827106" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <Interface Id="124b473e-3bf8-449d-8b0b-2ddf14b4234c" name="IDataAccessor&lt;TEntity&gt;" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="2db83b02-c9fb-4cbe-a439-2e83ff43d584" />
+              <ownedOperations>
+                <operation Id="c830f9e3-ca9b-4e22-a6f1-bc4cc38d530c" name="Add" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="12fb4604-ec47-4a1c-93eb-64ca5fa4dca6" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3f0697e5-938c-46fc-91c7-321d885d5622" name="entity" direction="In">
+                        <elementDefinition Id="cfec9208-1679-4091-a71f-a1146ba9bdb5" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="6eb296ee-631b-42d9-905c-1abb1e3aada1" LastKnownName="TEntity" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperations>
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="90e0c5e6-b066-4a67-af49-fc840f18f20b" name="UserInfoDataAccessorBase" isAbstract="true" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="c4b597bd-a516-4865-a983-9a54aec8f3e8" />
+              <suppliersInternal>
+                <interfaceRealization Id="4d5b96dc-dee7-4de9-9450-ebb446f267b7">
+                  <interfaceMoniker Id="124b473e-3bf8-449d-8b0b-2ddf14b4234c" LastKnownName="IDataAccessor&lt;TEntity&gt;" />
+                  <elementDefinition Id="69b92d0f-df9f-417a-9245-5396a220b22f" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="14ef4664-c443-4a61-abd1-b6d97127b04b" name="Add" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="71b19394-8523-4b18-9d1c-4b82cda13d78" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="d15ce2be-f017-4ea7-b9a2-efaefd16e8fb" name="entity" direction="In">
+                        <elementDefinition Id="2480ac5a-6615-4375-b419-82c5f963ff7e" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="6eb296ee-631b-42d9-905c-1abb1e3aada1" LastKnownName="TEntity" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="962c3892-9613-4800-8b51-598bdcae9bea" name="UserInfo" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="7620f5cd-9500-48ed-92b1-f080cf4f4a77" />
+              <ownedAttributesInternal>
+                <property Id="990777f2-4959-45fc-b699-3ca48543e28a" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3509bfb0-caf3-49d2-9450-474e51866006" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8f3da00e-a8fa-40f1-bda5-f8c2c4000955" LastKnownName="Guid" />
+                  </type_NamedElement>
+                </property>
+                <property Id="ed61a836-2b54-4795-9bb9-5bf75d7d41d3" name="FirstName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d2df2b76-9c54-4adf-814a-82e7a1654b0b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="69c0d795-68a6-4620-a060-e7afb6214fd7" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="05576edc-2789-4337-852d-0d2c710d860c" name="LastName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="185187e0-2376-4325-9a44-50bc6ab8a90d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="69c0d795-68a6-4620-a060-e7afb6214fd7" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="3594ec20-0576-4537-9791-0134cb23ab1b" name="Epam.Demo.DataAccess.Ef">
+        <elementDefinition Id="136bc92d-86a5-4763-98bd-7ff6ad447d2f" />
+        <suppliersInternal>
+          <dependency Id="1094c8e5-014f-4a8f-9b93-b48f25c35afc">
+            <packageMoniker Id="7e711183-e5b8-421d-9472-abdcddc476b2" LastKnownName="Epam.Demo.DataAccess" />
+            <elementDefinition Id="df18b313-2331-4129-a817-9477c91942b5" />
+          </dependency>
+        </suppliersInternal>
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="571e7b24-84b8-4bfb-8032-980efaca7ffa" name="UserInfoDataAccessor" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="d821637f-b884-4237-a5ad-3427f5287290" />
+              <generalsInternal>
+                <generalization Id="ba7cda60-b66e-4d37-8ff9-d1b5f34ed2f0" isSubstitutable="false">
+                  <classMoniker Id="90e0c5e6-b066-4a67-af49-fc840f18f20b" LastKnownName="UserInfoDataAccessorBase" />
+                  <elementDefinition Id="ae719954-0166-4518-a3cd-47a074c11035" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="f1e39237-11ee-4d82-91ea-5d968af05357" name="UserDbContext" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b9ca2542-c33a-46cf-8830-3c497dff09ce" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="1552e23f-6231-499f-9cc6-840abd29c827" name="Epam.Demo.DataAccess.Ef.SqlServer">
+        <elementDefinition Id="6e6a8494-5a29-4668-a7a4-11af22eaf9c1" />
+        <suppliersInternal>
+          <dependency Id="5c60ba04-064a-4478-bd5b-2c092c672dd5">
+            <packageMoniker Id="3594ec20-0576-4537-9791-0134cb23ab1b" LastKnownName="Epam.Demo.DataAccess.Ef" />
+            <elementDefinition Id="abf01d37-d851-4de7-9b2b-78ccd8f0bfca" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="985cb973-8cb4-4ba9-813c-e84883ac3aa5" name="Epam.Demo.Repository">
+        <elementDefinition Id="1516505e-870b-4a5a-83f4-581541bf9e88" />
+        <suppliersInternal>
+          <dependency Id="1ed36998-94a3-4fcf-85da-3316b5b69320">
+            <packageMoniker Id="7e711183-e5b8-421d-9472-abdcddc476b2" LastKnownName="Epam.Demo.DataAccess" />
+            <elementDefinition Id="823ef5c7-c5cc-42f2-969c-25077534a35c" />
+          </dependency>
+        </suppliersInternal>
+        <packagedElements>
+          <packageHasNamedElement>
+            <Interface Id="de214984-fb9c-40d5-b460-427d739bc978" name="IUserInfoRepository" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="722b4270-6a88-42f3-8f6c-11513728df9f" />
+              <ownedOperations>
+                <operation Id="11f5d639-b7e1-4652-8579-1bbd508e6d4b" name="Save" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="72c37f52-d77c-4a63-81f4-347fda2cfaf9" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f2995254-96ca-44cf-b420-574e68aedb5b" name="userInfo" direction="In" isUnique="false">
+                        <elementDefinition Id="e23be5b4-4243-4d78-8c6f-4fb00e850f7e" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="7988acc6-952c-4adc-9c45-0f25992b724a" LastKnownName="UserInfo" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperations>
+            </Interface>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="513af40f-c39a-466a-bc14-48fb7193351a" name="Epam.Demo.Repository.Default">
+        <elementDefinition Id="aa64fcdc-25a1-4f20-aea7-7e493ad83b12" />
+        <suppliersInternal>
+          <dependency Id="f4e047bb-9da9-4751-ae29-fd89bf9a24e4">
+            <packageMoniker Id="985cb973-8cb4-4ba9-813c-e84883ac3aa5" LastKnownName="Epam.Demo.Repository" />
+            <elementDefinition Id="2028b8a5-4f25-4d46-aa53-249c07bc0235" />
+          </dependency>
+          <dependency Id="3706afee-b329-4a2c-acd8-b2f05de91f9c">
+            <packageMoniker Id="ae2ce947-6eea-47b7-86d3-6acd0fd87170" LastKnownName="Epam.Demo.Core" />
+            <elementDefinition Id="1b044464-d9fb-4ac5-a152-1eb40d38b2d6" />
+          </dependency>
+        </suppliersInternal>
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="7296d0fd-e112-4434-9a73-4c4928aaebc8" name="DefaultUserInfoRepository" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="c8df3333-db94-4e01-a15e-58993db61279" />
+              <suppliersInternal>
+                <interfaceRealization Id="51ae7c3f-78c4-4c8d-a5ff-13423558c512">
+                  <interfaceMoniker Id="de214984-fb9c-40d5-b460-427d739bc978" LastKnownName="IUserInfoRepository" />
+                  <elementDefinition Id="21d6052f-8076-40bb-b4fb-630f5222b6f4" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="b05b98ce-161a-4787-ac38-9701f4a2dc00" name="Save" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="908a492f-7787-4328-ba70-1f9891d217b2" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="d356c0b6-5482-4303-85a0-1790efed34ed" name="userInfo" direction="In" isUnique="false">
+                        <elementDefinition Id="5da89d86-3d34-432f-b53f-aafc3ca25011" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="7988acc6-952c-4adc-9c45-0f25992b724a" LastKnownName="UserInfo" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="4e8f675f-4b67-4d2d-a582-6660ded28c4a" name="Epam.Demo.Business">
+        <elementDefinition Id="e93540d8-4ff3-4ec1-aec7-de360d376e37" />
+        <suppliersInternal>
+          <dependency Id="1b30582c-3884-44e9-939f-0ec49fdf3af8">
+            <packageMoniker Id="985cb973-8cb4-4ba9-813c-e84883ac3aa5" LastKnownName="Epam.Demo.Repository" />
+            <elementDefinition Id="12c7c36d-0a49-4c43-b14a-6b707c842871" />
+          </dependency>
+        </suppliersInternal>
+        <packagedElements>
+          <packageHasNamedElement>
+            <Interface Id="2f8a901a-b158-4d46-8bee-d1469c071e7c" name="IUserInfoBusiness" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="1831fa2e-9ed0-4aa0-baa9-4ba695d4dd8b" />
+              <ownedOperations>
+                <operation Id="665aa0d7-93bb-4969-b88f-17d1132cce9c" name="Save" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="23082f95-aeaf-4385-a23b-4513d20830da" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="da4e3769-1f55-45c5-ad04-1d5f46629bbc" name="userInfo" direction="In" isUnique="false">
+                        <elementDefinition Id="df2677c9-4ff1-4bc2-8225-3a734fa18934" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="462f409f-7165-4f4f-8df8-b215361bc557" LastKnownName="UserInfoBusinessObject" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperations>
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="e7526818-d12e-430f-8a84-1c55ab9e32ea" name="UserInfoBusinessObject" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="08d1f043-3108-40e3-9133-6f4069182503" />
+              <ownedAttributesInternal>
+                <property Id="9c7f2231-19ec-4179-9bd2-008188e52a11" name="FirstName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e1cb66a1-5274-441b-aadb-2374cbe1722e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="69c0d795-68a6-4620-a060-e7afb6214fd7" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="77d73a03-7be7-411c-a2e8-3cf90ee62f2f" name="LastName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="50229305-09e9-4799-8784-a08b789942df" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="69c0d795-68a6-4620-a060-e7afb6214fd7" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="54890c16-2cf8-46f1-81c1-f7ba2ff4cca1" name="FullName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="75d9fe43-e5b0-462e-b524-1adec9fda8c0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="69c0d795-68a6-4620-a060-e7afb6214fd7" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="ea98f706-3176-4c72-bba9-8548f2acf5de" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c73c1790-04a5-4d0a-b612-7e204730990e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="69c0d795-68a6-4620-a060-e7afb6214fd7" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="50b84b14-0a9b-4b7f-aeaf-46dfb023a893" name="Epam.Demo.Business.Default">
+        <elementDefinition Id="f0b84f8f-50ee-4b58-a035-48ff1f382abf" />
+        <suppliersInternal>
+          <dependency Id="47bd5bbb-8db3-46e8-8282-d59fa907b15a">
+            <packageMoniker Id="4e8f675f-4b67-4d2d-a582-6660ded28c4a" LastKnownName="Epam.Demo.Business" />
+            <elementDefinition Id="62531ce8-db8a-4337-b77a-0fe5d93dc6bd" />
+          </dependency>
+        </suppliersInternal>
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="a93b1b47-0397-4b8b-b640-8e3722a3b04f" name="DefaultUserInfoBusiness" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="57d71914-76ce-46c5-9f1b-b5e81c253404" />
+              <suppliersInternal>
+                <interfaceRealization Id="d74394cf-4bf5-4bfd-8a1e-f7a8cf27fa27">
+                  <interfaceMoniker Id="2f8a901a-b158-4d46-8bee-d1469c071e7c" LastKnownName="IUserInfoBusiness" />
+                  <elementDefinition Id="7f34ef3f-0319-430f-ba23-6005b63f3901" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="440d733f-6c9a-4496-bd8f-443e18d4dc73" name="Save" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9f1b605b-6f70-480a-b152-7258fe78346d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7dd9e041-7985-47ff-bbee-7d8d13858845" name="userInfo" direction="In" isUnique="false">
+                        <elementDefinition Id="89736a82-1713-4385-9858-b856f3e01c8a" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="462f409f-7165-4f4f-8df8-b215361bc557" LastKnownName="UserInfoBusinessObject" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="bb4227e2-3651-428d-be1a-01ae78369f33" name="Epam.Demo.Service">
+        <elementDefinition Id="7f282be8-b067-4da2-8c6f-a7dbd10957b0" />
+        <suppliersInternal>
+          <dependency Id="79622eb2-e3ea-4a53-bb2d-62352a3182d7">
+            <packageMoniker Id="4e8f675f-4b67-4d2d-a582-6660ded28c4a" LastKnownName="Epam.Demo.Business" />
+            <elementDefinition Id="419128b0-6d2c-4265-8003-0443ce5168be" />
+          </dependency>
+        </suppliersInternal>
+        <packagedElements>
+          <packageHasNamedElement>
+            <Interface Id="f386af28-01c3-4064-a4ac-ba7095423c6d" name="IUserService" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="a79881fc-eded-4112-aaa4-b98cd50c1684" />
+              <ownedOperations>
+                <operation Id="ea51d019-763e-4f36-8089-5c55bd938456" name="Save" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="7b9ef2f0-93d5-4c8a-b783-5e72c3727356" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2bc1bb55-a827-4a7a-a530-ad3ea7f20fad" name="userInfo" direction="In" isUnique="false">
+                        <elementDefinition Id="aa9cc064-0e8f-4a5f-8739-1851c3d43ec3" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="28b2c614-caba-4aea-9e91-bba6abd0d207" LastKnownName="UserInfo" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperations>
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="c39eb44a-1ec7-4b1d-a8b2-57b750ff0070" name="UserInfo" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="3c42e7f6-39e1-4761-b7de-1a4015fda837" />
+              <ownedAttributesInternal>
+                <property Id="4bbd61ee-51d4-4197-a057-68ea4c4f5b9a" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4ac152e9-e861-4fbf-b836-e3efaec2912b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="69c0d795-68a6-4620-a060-e7afb6214fd7" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="4613aec2-657f-4fa0-9fca-96d1403a8dac" name="Surname" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fca240b0-0176-42d0-998d-8667d713e148" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="69c0d795-68a6-4620-a060-e7afb6214fd7" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="7570031f-9277-4707-b13e-a416d1460560" name="GivenName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="28fda6ff-969d-4fbc-9ddb-2b362c8e40c2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d697c3dd-9b45-40e3-ac8d-6d6ef1d03abe" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="78d228b2-fe52-4176-b444-706b8f56462b" name="Epam.Demo.Service.Default">
+        <elementDefinition Id="7d0e9d07-e407-4035-acba-a3fe4ae402b3" />
+        <suppliersInternal>
+          <dependency Id="6b8048f9-a799-480c-929c-ea3ceeffdd63">
+            <packageMoniker Id="bb4227e2-3651-428d-be1a-01ae78369f33" LastKnownName="Epam.Demo.Service" />
+            <elementDefinition Id="beced5a9-7e76-4113-b6ac-7b4300e24e3a" />
+          </dependency>
+        </suppliersInternal>
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="a52c79d5-f6fa-474a-815c-2b003bafbace" name="DefaultUserService" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="e4a59e60-34da-4a44-a558-9780f345f8c7" />
+              <suppliersInternal>
+                <interfaceRealization Id="fbfa716d-cade-4cb1-b84b-4a3a7c92939f">
+                  <interfaceMoniker Id="f386af28-01c3-4064-a4ac-ba7095423c6d" LastKnownName="IUserService" />
+                  <elementDefinition Id="351c5ee5-0ec6-4a33-a885-026f615af17c" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="3fb76a93-873c-4ed6-a753-bd784f1ab175" name="Save" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="82734b87-505d-4a8b-bd75-f624a2d22d13" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3bf6661b-ad88-44de-b0a2-0c3a7b529c89" name="userInfo" direction="In" isUnique="false">
+                        <elementDefinition Id="e63b7536-a752-4385-9355-03f5e39d5bdc" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="28b2c614-caba-4aea-9e91-bba6abd0d207" LastKnownName="UserInfo" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="76d06cf4-d2d6-4923-b6bb-11b9cb3a846d" name="Epam.Demo.App.GrpcServer">
+        <elementDefinition Id="598600d7-beab-42b3-87a5-2722530d019b" />
+        <suppliersInternal>
+          <dependency Id="07a9d6fa-0c83-43a2-bad1-2a3a125fdcfd">
+            <packageMoniker Id="bb4227e2-3651-428d-be1a-01ae78369f33" LastKnownName="Epam.Demo.Service" />
+            <elementDefinition Id="4c554474-6307-47e6-a629-951591403f83" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="b19c70c0-c705-4c78-b9d1-2402247476ec" name="Epam.Demo.App.ConsoleClient">
+        <elementDefinition Id="e0d88cef-0498-401e-9c5c-4334583c096e" />
+        <suppliersInternal>
+          <dependency Id="067591dc-10ca-4d7a-be9a-031bafd75721">
+            <packageMoniker Id="76d06cf4-d2d6-4923-b6bb-11b9cb3a846d" LastKnownName="Epam.Demo.App.GrpcServer" />
+            <elementDefinition Id="cf25cc44-2fed-4d0a-a91e-eaf5ae34909e" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="6eb296ee-631b-42d9-905c-1abb1e3aada1" name="TEntity" isAbstract="false" isLeaf="false" cachedFullName="TEntity">
+        <elementDefinition Id="5e4b6bcc-0830-4642-a14f-d8e982cfcf6d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="8f3da00e-a8fa-40f1-bda5-f8c2c4000955" name="Guid" isAbstract="false" isLeaf="false" cachedFullName="Guid">
+        <elementDefinition Id="8f88c214-7aff-4cf4-a0ea-64ddf05c7bff" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="69c0d795-68a6-4620-a060-e7afb6214fd7" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7988acc6-952c-4adc-9c45-0f25992b724a" name="UserInfo" isAbstract="false" isLeaf="false" cachedFullName="Epam.Demo.Modeling::Epam.Demo.DataAccess::UserInfo">
+        <elementDefinition Id="7620f5cd-9500-48ed-92b1-f080cf4f4a77" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="462f409f-7165-4f4f-8df8-b215361bc557" name="UserInfoBusinessObject" isAbstract="false" isLeaf="false" cachedFullName="Epam.Demo.Modeling::Epam.Demo.Business::UserInfoBusinessObject">
+        <elementDefinition Id="08d1f043-3108-40e3-9133-6f4069182503" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d697c3dd-9b45-40e3-ac8d-6d6ef1d03abe" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="28b2c614-caba-4aea-9e91-bba6abd0d207" name="UserInfo" isAbstract="false" isLeaf="false" cachedFullName="Epam.Demo.Modeling::Epam.Demo.Service::UserInfo">
+        <elementDefinition Id="3c42e7f6-39e1-4761-b7de-1a4015fda837" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="9e5828e3-2390-4942-8a46-8483e6b3a181" name="Epam.Demo.Modeling">
+    <elementDefinition Id="563e5b27-4b0a-4427-996e-64af2a014870" />
+    <profileInstances>
+      <packageHasProfileInstances Id="048c50f8-14d2-441f-986c-2923117a2ff3">
+        <profileInstance Id="cf7aa053-7d1c-4838-91b0-523163b1c320" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ddf18c72-c9f0-4901-9305-aa71979bf33f">
+        <profileInstance Id="749ee551-cab1-4dc7-9621-19537af345b0" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

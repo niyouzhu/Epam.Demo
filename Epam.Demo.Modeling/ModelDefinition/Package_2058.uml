@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="136bc92d-86a5-4763-98bd-7ff6ad447d2f"
+  name="Epam.Demo.DataAccess.Ef" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="df18b313-2331-4129-a817-9477c91942b5">
+      <packageMoniker
+        Id="11424712-d624-4979-939f-bf9bba827106"
+        LastKnownName="Epam.Demo.DataAccess"
+        LastKnownLocation="Package1_2054.uml" />
+    </dependency>
+  </suppliersInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="d821637f-b884-4237-a5ad-3427f5287290"
+        name="UserInfoDataAccessor"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="ae719954-0166-4518-a3cd-47a074c11035"
+            isSubstitutable="false">
+            <classMoniker
+              Id="c4b597bd-a516-4865-a983-9a54aec8f3e8"
+              LastKnownName="UserInfoDataAccessorBase"
+              LastKnownLocation="Package1_2054.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b9ca2542-c33a-46cf-8830-3c497dff09ce"
+        name="UserDbContext"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

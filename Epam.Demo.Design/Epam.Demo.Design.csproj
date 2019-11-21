@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Epam.Demo.BusinessLayer.Default\Epam.Demo.BusinessLayer.Default.csproj" />
+    <ProjectReference Include="..\Epam.Demo.BusinessLayer\Epam.Demo.BusinessLayer.csproj" />
+    <ProjectReference Include="..\Epam.Demo.Core\Epam.Demo.Core.csproj" />
+    <ProjectReference Include="..\Epam.Demo.DataAccess.Ef.SqlServer\Epam.Demo.DataAccess.Ef.SqlServer.csproj" />
+    <ProjectReference Include="..\Epam.Demo.DataAccess.Ef\Epam.Demo.DataAccess.Ef.csproj" />
+    <ProjectReference Include="..\Epam.Demo.DataAccess\Epam.Demo.DataAccess.csproj" />
+    <ProjectReference Include="..\Epam.Demo.Repository.Default\Epam.Demo.Repository.Default.csproj" />
+    <ProjectReference Include="..\Epam.Demo.Repository\Epam.Demo.Repository.csproj" />
+    <ProjectReference Include="..\Epam.Demo.ServiceLayer.Default\Epam.Demo.ServiceLayer.Default.csproj" />
+    <ProjectReference Include="..\Epam.Demo.ServiceLayer\Epam.Demo.ServiceLayer.csproj" />
+  </ItemGroup>
+
+</Project>

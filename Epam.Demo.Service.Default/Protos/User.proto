@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "Epam.Demo.Service.Default";
+
+package User;
+
+service User {
+  rpc SaveInfo (UserRequest) returns (UserReply);
+}
+
+message UserRequest {
+  string fullname = 1;
+}
+
+// The response message containing the greetings.
+message UserReply {
+  string status = 1;
+}

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1516505e-870b-4a5a-83f4-581541bf9e88"
+  name="Epam.Demo.Repository" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="823ef5c7-c5cc-42f2-969c-25077534a35c">
+      <packageMoniker
+        Id="11424712-d624-4979-939f-bf9bba827106"
+        LastKnownName="Epam.Demo.DataAccess"
+        LastKnownLocation="Package1_2054.uml" />
+    </dependency>
+  </suppliersInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="722b4270-6a88-42f3-8f6c-11513728df9f"
+        name="IUserInfoRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="72c37f52-d77c-4a63-81f4-347fda2cfaf9"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e23be5b4-4243-4d78-8c6f-4fb00e850f7e"
+                  name="userInfo"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7620f5cd-9500-48ed-92b1-f080cf4f4a77"
+                      LastKnownName="UserInfo"
+                      LastKnownLocation="Package1_2054.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="761bdfba-0235-48d8-b891-a5f4ecf6b275"
+        name="UserInfo" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

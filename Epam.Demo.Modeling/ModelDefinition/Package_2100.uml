@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="aa64fcdc-25a1-4f20-aea7-7e493ad83b12"
+  name="Epam.Demo.Repository.Default" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="2028b8a5-4f25-4d46-aa53-249c07bc0235">
+      <packageMoniker
+        Id="1516505e-870b-4a5a-83f4-581541bf9e88"
+        LastKnownName="Epam.Demo.Repository"
+        LastKnownLocation="Package1_2059.uml" />
+    </dependency>
+    <dependency
+      Id="1b044464-d9fb-4ac5-a152-1eb40d38b2d6">
+      <packageMoniker
+        Id="4607961c-33bb-42e2-9037-aebb1bc980e3"
+        LastKnownName="Epam.Demo.Core"
+        LastKnownLocation="Package_2054.uml" />
+    </dependency>
+  </suppliersInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="c8df3333-db94-4e01-a15e-58993db61279"
+        name="DefaultUserInfoRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="21d6052f-8076-40bb-b4fb-630f5222b6f4">
+            <interfaceMoniker
+              Id="722b4270-6a88-42f3-8f6c-11513728df9f"
+              LastKnownName="IUserInfoRepository"
+              LastKnownLocation="Package1_2059.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="908a492f-7787-4328-ba70-1f9891d217b2"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5da89d86-3d34-432f-b53f-aafc3ca25011"
+                  name="userInfo"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7620f5cd-9500-48ed-92b1-f080cf4f4a77"
+                      LastKnownName="UserInfo"
+                      LastKnownLocation="Package1_2054.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

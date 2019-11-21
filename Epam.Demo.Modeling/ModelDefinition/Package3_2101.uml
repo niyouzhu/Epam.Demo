@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e0d88cef-0498-401e-9c5c-4334583c096e"
+  name="Epam.Demo.App.ConsoleClient" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="cf25cc44-2fed-4d0a-a91e-eaf5ae34909e">
+      <packageMoniker
+        Id="598600d7-beab-42b3-87a5-2722530d019b"
+        LastKnownName="Epam.Demo.App.GrpcServer"
+        LastKnownLocation="Package2_2101.uml" />
+    </dependency>
+  </suppliersInternal>
+</package>

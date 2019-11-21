@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="7d0e9d07-e407-4035-acba-a3fe4ae402b3"
+  name="Epam.Demo.Service.Default" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="beced5a9-7e76-4113-b6ac-7b4300e24e3a">
+      <packageMoniker
+        Id="7f282be8-b067-4da2-8c6f-a7dbd10957b0"
+        LastKnownName="Epam.Demo.Service"
+        LastKnownLocation="Package_2101.uml" />
+    </dependency>
+  </suppliersInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="e4a59e60-34da-4a44-a558-9780f345f8c7"
+        name="DefaultUserService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="351c5ee5-0ec6-4a33-a885-026f615af17c">
+            <interfaceMoniker
+              Id="a79881fc-eded-4112-aaa4-b98cd50c1684"
+              LastKnownName="IUserService"
+              LastKnownLocation="Package_2101.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="82734b87-505d-4a8b-bd75-f624a2d22d13"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e63b7536-a752-4385-9355-03f5e39d5bdc"
+                  name="userInfo"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3c42e7f6-39e1-4761-b7de-1a4015fda837"
+                      LastKnownName="UserInfo"
+                      LastKnownLocation="Package_2101.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

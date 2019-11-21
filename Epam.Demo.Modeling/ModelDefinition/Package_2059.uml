@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="6e6a8494-5a29-4668-a7a4-11af22eaf9c1"
+  name="Epam.Demo.DataAccess.Ef.SqlServer" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="abf01d37-d851-4de7-9b2b-78ccd8f0bfca">
+      <packageMoniker
+        Id="136bc92d-86a5-4763-98bd-7ff6ad447d2f"
+        LastKnownName="Epam.Demo.DataAccess.Ef"
+        LastKnownLocation="Package_2058.uml" />
+    </dependency>
+  </suppliersInternal>
+</package>
