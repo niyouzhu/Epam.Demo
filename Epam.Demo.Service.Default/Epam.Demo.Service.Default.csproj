@@ -23,6 +23,7 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.0.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Epam.Demo.Core\Epam.Demo.Core.csproj" />
     <ProjectReference Include="..\Epam.Demo.Service\Epam.Demo.Service.csproj" />
   </ItemGroup>
 

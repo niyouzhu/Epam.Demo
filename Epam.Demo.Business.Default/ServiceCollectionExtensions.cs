@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
-namespace Epam.Demo.Business.Default
+﻿using Epam.Demo.Business;
+using Epam.Demo.Business.Default;
+namespace Microsoft.Extensions.DependencyInjection
 {
-    public static class Extensions
+    public static class ServiceCollectionExtensions
     {
         public static IServiceCollection AddDefaultBusiness(this IServiceCollection services)
         {

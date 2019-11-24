@@ -14,6 +14,7 @@
     <ProjectReference Include="..\Epam.Demo.DataAccess.Ef.SqlServer\Epam.Demo.DataAccess.Ef.SqlServer.csproj" />
     <ProjectReference Include="..\Epam.Demo.Repository.Default\Epam.Demo.Repository.Default.csproj" />
     <ProjectReference Include="..\Epam.Demo.Service.Default\Epam.Demo.Service.Default.csproj" />
+    <ProjectReference Include="..\Eric.DotNetCore.Interception.Castle\Eric.DotNetCore.Interception.Castle.csproj" />
   </ItemGroup>
 
 </Project>

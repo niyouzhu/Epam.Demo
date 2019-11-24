@@ -18,9 +18,5 @@ namespace Epam.Demo.Service.Default
             }
         }
 
-        public static IServiceCollection AddDefaultService(this IServiceCollection services)
-        {
-            return services.AddSingleton<IUserService, DefaultUserService>();
-        }
     }
 }

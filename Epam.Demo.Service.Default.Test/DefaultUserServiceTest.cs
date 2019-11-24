@@ -17,9 +17,11 @@ namespace Epam.Demo.Service.Default.Test
         {
             var dbContextOptionBuilder = new DbContextOptionsBuilder<UserDbContext>();
             dbContextOptionBuilder.UseSqlServer(ConnectionString);
-            var accessores = new Dictionary<string, IDataAccessor<DataAccess.UserInfo>>();
-            accessores.Add("default", new UserInfoDataAccessor(new UserDbContextCreator(dbContextOptionBuilder.Options)));
-            var repository = new DefaultUserInfoRepository(accessores, new DefaultRepositoryOptions() { RetriedTimes = 3 });
+            var accessores = new Dictionary<string, IDataAccessor<DataAccess.UserInfo>>
+            {
+                { "default", new UserInfoDataAccessor(new UserDbContextCreator(dbContextOptionBuilder.Options)) }
+            };
+            var repository = new DefaultUserInfoRepository(accessores);
             var business = new DefaultUserInfoBusiness(repository);
             var userService = new DefaultUserService(business);
             userService.Save(new UserInfo() { GivenName = "Bar", Surname = "Foo" });

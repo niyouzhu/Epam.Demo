@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Epam.Demo.DataAccess.Ef;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using System;
 
-namespace Epam.Demo.DataAccess.Ef.SqlServer
+namespace Microsoft.Extensions.DependencyInjection
+
 {
-    public static class Extensions
+    public static class ServiceCollectionExtensions
     {
         public static IServiceCollection AddSqlServer<TContext>(this IServiceCollection services, Action<DbContextOptionsBuilder> builder) where TContext : DbContext
         {
