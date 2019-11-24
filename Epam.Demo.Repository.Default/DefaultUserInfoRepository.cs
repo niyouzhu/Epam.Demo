@@ -16,7 +16,7 @@ namespace Epam.Demo.Repository.Default
         [Exception(3, "Epam.Demo.Core.ConnectionException")]
         public void Save(UserInfo userInfo)
         {
-            throw new ConnectionException();
+            //throw new ConnectionException();
             foreach (var item in DataAccessores)
             {
                 item.Value.Add(userInfo);
